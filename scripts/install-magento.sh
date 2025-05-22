@@ -83,6 +83,12 @@ ls -lath
 mv ./project-community-edition ./magento
 ls -lath ./magento
 
+if [ "$INPUT_COMPOSER_REQUIRE" != "" ]
+then
+  cd magento
+  composer require "$INPUT_COMPOSER_REQUIRE"
+  cd ..
+fi
 
 if [ "$INPUT_ENABLE" =  "pwa" ]
 then

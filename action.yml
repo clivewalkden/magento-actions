@@ -52,6 +52,9 @@ inputs:
   no_push:
     description: 'do not push magento source code to github repo values 0|1'
     default: 0
+  composer_require:
+    description: 'composer require additional modules during the install process, to be executed after magento installation'
+    default: ''
   magento_only:
     description: 'apply the process on magento code only (i.e magento dir)'
     default: 0
@@ -89,7 +92,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/mad-i-t/magento-actions:3.33'
+  image: 'Dockerfile'
 branding:
   icon: 'arrow-up-circle'
   color: 'blue'

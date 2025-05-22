@@ -208,6 +208,7 @@ jobs:
       with:
         process: 'install-magento'
         magento_version: 2.4.8
+        composer_require: 'magepulse/magento2-module-core'
 #       no_push: 1 //uncomment this to prevent files from getting pushed to repo
 ```
 
